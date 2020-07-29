@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> To Do </h1>
+<p>
+    {% if user.is_authenticated %}
+    {% for task in tasks %}
+    <ul>
+      <li> To Do:  {{ task.title }} </li>
+    </ul>
+    {% endfor %}
+    {% else %}
+        <p> Sorry! you need to login to see your task </p>
+    {% endif %}
+</p>
+
+</body>
+</html>
