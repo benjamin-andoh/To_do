@@ -10,7 +10,10 @@
     {% if user.is_authenticated %}
     {% for task in tasks %}
     <ul>
-      <li> To Do:  {{ task.title }} </li>
+        <li> Title  {{ task.title }} </li>
+        <li> Developer  {{ task.developer }} </li>
+        <li> Supervisor  {{ task.supervisor }} </li>
+        <li> Description  {{ task.description }} </li>
     </ul>
     {% endfor %}
     {% else %}
