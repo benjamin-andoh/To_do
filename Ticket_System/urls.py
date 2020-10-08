@@ -21,8 +21,17 @@ admin.site.site_title = "ticket management"
 admin.site.index_title = "management"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('Home.urls')),
-    path('to_do', include('To_Do.urls')),
+    path(
+        'admin/',
+        admin.site.urls
+    ),
+    path(
+        '',
+        include('Home.urls')
+    ),
+    path(
+        'to_do',
+        include('To_Do.urls')
+    ),
 
 ]
