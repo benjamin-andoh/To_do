@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth import views as auth_views
 
 admin.site.site_header = "Ticket Management"
 admin.site.site_title = "ticket management"
@@ -26,6 +25,4 @@ urlpatterns = [
     path('', include('Home.urls')),
     path('to_do', include('To_Do.urls')),
 
-    path('login', auth_views.LoginView.as_view(template_name='home/login.html'), name='login'),
-    path('logout', auth_views.LogoutView.as_view(template_name='home/logout.html'), name='logout'),
 ]

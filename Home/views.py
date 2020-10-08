@@ -1,19 +1,26 @@
-from django.contrib.auth.models import User
 from django.http import HttpResponse
-from rest_framework import generics
-from rest_framework.permissions import AllowAny
+from django.shortcuts import render, redirect
+from django.views import View
 
-from Home.serializers import UserSerializer
-
-
-class UserCreate(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    permission_classes = (AllowAny,)
+from Home.forms import Register
 
 
-def login(request):
-    pass
+def register(request):
+    form = Register()
+    if request.method == 'POST':
+        form = Register(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    context = {'form': form}
+    return render(request, 'register.html', context,)
+
+
+
+
+
+# def login(request):
+
 
 
 def logout(request):

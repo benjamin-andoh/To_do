@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'Home.apps.HomeConfig',
     'To_Do.apps.ToDoConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Ticket_System.urls'
+LOGIN_REDIRECT_URL = 'home'
 
 TEMPLATES = [
     {
