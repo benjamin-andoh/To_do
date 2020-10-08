@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Ticket_System.urls'
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'To_Do'
 
 TEMPLATES = [
     {

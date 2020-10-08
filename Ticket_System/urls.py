@@ -30,7 +30,7 @@ urlpatterns = [
         include('Home.urls')
     ),
     path(
-        'to_do',
+        'To_Do/',
         include('To_Do.urls')
     ),
 
